@@ -3,4 +3,50 @@
     <string name="action_settings">Settings</string>
     <string name="request_permission">Request Permission</string>
     <string name="title">Android Runtime Permissions With Kotlin</string>
+
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="email">Email</string>
+
+    // header strings
+    <string name="bearer">bearer</string>
+    <string name="access_token">access-token</string>
+    <string name="authorization">Authorization</string>
+    <string name="content_type">Content-Type</string>
+
+    <string name="service_unavailable">Service unavailable</string>
+    <string name="request_timeout">Request timeout</string>
+
+    // login validation strings
+    <string name="error_enter_email">Enter email</string>
+    <string name="error_enter_valid_email">Enter valid email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="error_password_length">Password length must be greater than 5</string>
+    <string name="wrong_first_name">Enter a valid first name</string>
+    <string name="wrong_last_name">Enter valid last name</string>
+    <string name="something_went_wrong">Something went wrong</string>
+
+    //internet connection error message
+    <string name="internet_connection_error">Check your internet connection</string>
+
+    //login screen string header
+    <string name="proceed_with_your_login">Proceed with your<![CDATA[<br><b>Login</b></br>]]></string>
+
+    // pdate app dialog strings
+    <string name="title_update_app">Update app</string>
+    <string name="message_update_app">App update available</string>
+    <string name="button_update">UPDATE</string>
+    <string name="button_later">LATER</string>
+
+    // chnage locale dialog strings
+    <string name="select_language">Select language</string>
+
+    // strings for logout dialog
+    <string name="logout">Logout</string>
+    <string name="logout_alert_message">Are you sure want to logout?</string>
+    <string name="option_yes">Yes</string>
+    <string name="option_no">No</string>
+    <string name="you_have_been_unauthorised">You have been unauthorised</string>
+
 </resources>

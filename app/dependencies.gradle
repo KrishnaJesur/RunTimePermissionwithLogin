@@ -1,0 +1,76 @@
+ext {
+    def kotlinVersion = '1.3.50'
+    def androidMaterialVersion = '1.0.0'
+    def coreKtxVersion = '1.1.0'
+    def constraintLayoutVersion = '1.1.3'
+    def appcompatVersion = '1.1.0'
+    def legacySupportVersion = '1.0.0'
+    def navigationUiVersion = '2.1.0'
+
+    commonDependencies = [
+            fileTree        : fileTree(dir: 'libs', include: ['*.jar']),
+            kotlinStdlib    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            kotlinReflect   : "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}",
+            androidMaterial : "com.google.android.material:material:${androidMaterialVersion}",
+            coreKtx         : "androidx.core:core-ktx:${coreKtxVersion}",
+            constraintlayout: "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            appcompat       : "androidx.appcompat:appcompat:${appcompatVersion}",
+            legacySupport   : "androidx.legacy:legacy-support-v4:${legacySupportVersion}",
+            navigationUi    : "androidx.navigation:navigation-ui:${navigationUiVersion}",
+            navigationUiktx : "androidx.navigation:navigation-ui-ktx:${navigationUiVersion}"
+    ]
+
+    def junitVersion = '4.12'
+
+    testImplementationDependencies = [
+            junit: "junit:junit:${junitVersion}"
+    ]
+
+    def runnerVersion = '1.2.0'
+    def espressoCoreVersion = '3.2.0'
+
+    androidTestImplementation = [
+            runner      : "androidx.test:runner:${runnerVersion}",
+            espressoCore: "androidx.test.espresso:espresso-core:${espressoCoreVersion}"
+    ]
+
+
+    def RetrofitVersion = '2.6.2'
+    def OkHttpVersion = '4.2.2'
+    def coroutinesAdapterVersion = '0.9.2'
+
+    networkDependencies = [
+            retrofit             : "com.squareup.retrofit2:retrofit:${RetrofitVersion}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${RetrofitVersion}",
+            retrofitAdapter      : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${coroutinesAdapterVersion}",
+            okHttp3              : "com.squareup.okhttp3:okhttp:${OkHttpVersion}",
+            okHttp3Logging       : "com.squareup.okhttp3:logging-interceptor:${OkHttpVersion}"
+    ]
+
+    def firebaseCoreVersion = '17.0.0'
+    def firebaseMessagingVersion = '19.0.1'
+
+    firebaseDependencies = [
+            firebaseCore     : "com.google.firebase:firebase-core:${firebaseCoreVersion}",
+            firebaseMessaging: "com.google.firebase:firebase-messaging:${firebaseMessagingVersion}"
+    ]
+
+    def coroutinesVersion = '1.3.2'
+
+    kotlinCoroutinesDependencies = [
+            coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}"
+    ]
+    
+
+    def glideVersion = '4.10.0'
+
+    glideDependencies = [
+            glideMain: "com.github.bumptech.glide:glide:${glideVersion}"
+    ]
+
+    glideCompiler = [
+            glideCompiler: "com.github.bumptech.glide:compiler:${glideVersion}"
+    ]
+
+}

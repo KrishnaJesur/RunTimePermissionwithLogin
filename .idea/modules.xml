@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Multiple-Permissions-master.iml" filepath="$PROJECT_DIR$/Multiple-Permissions-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/KotlinPermissionAndLogin.iml" filepath="$PROJECT_DIR$/KotlinPermissionAndLogin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

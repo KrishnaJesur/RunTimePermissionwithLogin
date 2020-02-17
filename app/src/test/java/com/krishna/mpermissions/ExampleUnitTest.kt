@@ -1,4 +1,4 @@
-package com.codility.mpermissions
+package com.krishna.mpermissions
 
 import org.junit.Test
 

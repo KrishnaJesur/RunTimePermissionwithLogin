@@ -17,4 +17,33 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="PoppinsRegular" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/pureBlack</item>
+        <item name="android:textSize">12sp</item>
+        <item name="colorControlNormal">@color/pureBlack</item>
+        <item name="colorControlActivated">@color/pureBlack</item>
+        <item name="colorControlHighlight">@color/pureBlack</item>
+    </style>
+
+    <style name="PoppinsRegularRadioButton" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/pureBlack</item>
+        <item name="android:textSize">12sp</item>
+        <item name="colorControlNormal">@color/pureBlack</item>
+        <item name="colorControlActivated">@color/pureBlack</item>
+        <item name="colorControlHighlight">@color/pureBlack</item>
+        <item name="android:buttonTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="PoppinsRegularTextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/pureBlack</item>
+        <item name="android:textSize">12sp</item>
+        <item name="colorControlNormal">@color/pureBlack</item>
+        <item name="colorControlActivated">@color/pureBlack</item>
+        <item name="colorControlHighlight">@color/pureBlack</item>
+    </style>
+
+
 </resources>

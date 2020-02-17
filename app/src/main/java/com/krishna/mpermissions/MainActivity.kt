@@ -1,4 +1,4 @@
-package com.codility.mpermissions
+package com.krishna.mpermissions
 
 import android.Manifest
 import android.content.Context
@@ -8,12 +8,14 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.support.design.widget.Snackbar
-import android.support.v4.app.ActivityCompat
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import androidx.core.app.ActivityCompat
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import com.krishna.mpermissions.ui.dashboard.DashboardActivity
+import com.krishna.mpermissions.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -33,7 +35,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btRequestPermission -> {
                 requestPermission()
             }
+
         }
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +49,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btRequestPermission.setOnClickListener(this)
 
         permissionStatus = getSharedPreferences("permissionStatus", Context.MODE_PRIVATE)
+
     }
 
     private fun requestPermission() {
@@ -85,7 +90,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             editor.commit()
         } else {
             //You already have the permission, just go ahead.
-            Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
+//            Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
+            startActivity(LoginActivity.getInstance(this))
         }
     }
 
@@ -104,7 +110,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             if (allgranted) {
-                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
+//                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
+                startActivity(LoginActivity.getInstance(this))
             } else if (ActivityCompat.shouldShowRequestPermissionRationale(this, permissionsRequired[0])
                     || ActivityCompat.shouldShowRequestPermissionRationale(this, permissionsRequired[1])
                     || ActivityCompat.shouldShowRequestPermissionRationale(this, permissionsRequired[2])) {
@@ -133,7 +140,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (sentToSettings) {
             if (ActivityCompat.checkSelfPermission(this, permissionsRequired[0]) == PackageManager.PERMISSION_GRANTED) {
                 //Got Permission
-                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
+                startActivity(LoginActivity.getInstance(this))
+//                Toast.makeText(applicationContext, "Allowed All Permissions", Toast.LENGTH_LONG).show()
             }
         }
     }
